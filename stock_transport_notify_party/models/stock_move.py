@@ -29,7 +29,7 @@ class StockMove(models.Model):
         _super = super(StockMove, self)
         res = _super._prepare_procurement_from_move(move)
         update = {
-            "notify_party_id": move.procurement_id.notify_partner_id.id,
+            "notify_party_id": move.procurement_id.notify_party_id.id,
         }
         res.update(update)
         return res
