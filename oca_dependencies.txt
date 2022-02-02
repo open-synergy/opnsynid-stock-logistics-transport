@@ -15,4 +15,3 @@
 # sale-workflow https://github.com/OCA/sale-workflow branchname
 stock-logistics-transport https://github.com/OCA/stock-logistics-transport 8.0
 odoomrp-wip https://github.com/odoomrp/odoomrp-wip 8.0
-

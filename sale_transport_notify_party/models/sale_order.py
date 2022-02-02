@@ -2,7 +2,7 @@
 # Copyright 2017 OpenSynergy Indonesia
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from openerp import models, fields, api
+from openerp import api, fields, models
 
 
 class SaleOrder(models.Model):
@@ -38,8 +38,9 @@ class SaleOrder(models.Model):
         _super = super(SaleOrder, self)
         res = _super._prepare_procurement_group(order)
         changes = {
-            "notify_party_id": order.notify_party_id and
-            order.notify_party_id.id or False,
+            "notify_party_id": order.notify_party_id
+            and order.notify_party_id.id
+            or False,
         }
         res.update(changes)
         return res
